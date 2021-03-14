@@ -9,4 +9,14 @@ public class SportSchoolAppRepo {
         }
         persons[personIndex++] = person;
     }
+
+    public void displayAll(){
+        for (int i = 0; i < personIndex; i++) {
+            System.out.println(persons[i]);
+        }
+    }
+
+    public void train(Person person){
+        person.train();
+    }
 }
