@@ -17,7 +17,7 @@ public class SportSchoolApp {
         Club club;
 
         do {
-            System.out.println("--- Sport School App");
+            System.out.println("--- Sport School App ---");
             System.out.println("1 - add footballer");
             System.out.println("2 - add runner");
             System.out.println("3 - add swimmer");
@@ -50,7 +50,7 @@ public class SportSchoolApp {
                     String position = scanner.nextLine();
 
                     club = new Club(clubName,establishmentYear);
-                    Footballer footballer = new Footballer(personName,personSurname,birthYear,diet,initYear,club,position);
+                    Person footballer = new Footballer(personName,personSurname,birthYear,diet,initYear,club,position);
                     sportSchoolAppRepo.add(footballer);
                     break;
                 case 2:
@@ -77,7 +77,7 @@ public class SportSchoolApp {
                     String bestRunTime = scanner.nextLine();
 
                     club = new Club(clubName,establishmentYear);
-                    Runner runner = new Runner(personName,personSurname,birthYear,diet,initYear,club,favouriteDistance,bestRunTime);
+                    Person runner = new Runner(personName, personSurname, birthYear, diet, initYear, club, favouriteDistance, bestRunTime);
                     sportSchoolAppRepo.add(runner);
                     break;
                 case 3:
@@ -104,27 +104,30 @@ public class SportSchoolApp {
                     String bestSwimTime = scanner.nextLine();
 
                     club = new Club(clubName,establishmentYear);
-                    Swimmer swimmer = new Swimmer(personName,personSurname,birthYear,diet,initYear,club,favouriteStyle,bestSwimTime);
+                    Sportsman swimmer = new Swimmer(personName,personSurname,birthYear,diet,initYear,club,favouriteStyle,bestSwimTime);
                     sportSchoolAppRepo.add(swimmer);
                     break;
                 case 4:
                     sportSchoolAppRepo.displayAll();
                     break;
                 case 5:
-                    System.out.println("1 - Footballer");
-                    System.out.println("2 - Runner");
-                    System.out.println("3 - Swimmer");
-                    option = scanner.nextInt();
-                    scanner.nextLine();
+//                    System.out.println("1 - Footballer");
+//                    System.out.println("2 - Runner");
+//                    System.out.println("3 - Swimmer");
+//                    option = scanner.nextInt();
+//                    scanner.nextLine();
 
-                    switch(option){
-                        case 1:
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                    }
+//                    switch(option){
+//                        case 1:
+                            sportSchoolAppRepo.train();
+//                            break;
+//                        case 2:
+//                            //runner.train();
+//                            break;
+//                        case 3:
+//                            //swimmer.train();
+//                            break;
+//                    }
                     break;
             }
         } while (option != 0);

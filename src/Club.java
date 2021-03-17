@@ -12,4 +12,12 @@ public class Club {
         System.out.println("Club name: "+clubName);
         System.out.println("Establishment: "+establishmentYear);
     }
+
+    @Override
+    public String toString() {
+        return "Club{" +
+                "clubName='" + clubName + '\'' +
+                ", establishmentYear=" + establishmentYear +
+                '}';
+    }
 }

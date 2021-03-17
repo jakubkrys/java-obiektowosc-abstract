@@ -12,4 +12,15 @@ public abstract class Sportsman extends Person {
     }
 
     public abstract void train();
+
+    public abstract void display();
+
+    @Override
+    public String toString() {
+        return super.toString() + "Sportsman{" +
+                "diet='" + diet + '\'' +
+                ", initYear=" + initYear +
+                ", club=" + club +
+                '}';
+    }
 }

@@ -16,7 +16,9 @@ public class SportSchoolAppRepo {
         }
     }
 
-    public void train(Person person){
-        person.train();
+    public void train() {
+        for (int i = 0; i < personIndex; i++) {
+            persons[i].train();
+        }
     }
 }

@@ -11,4 +11,9 @@ public class Footballer extends Sportsman{
     public void train() {
         System.out.println("Gram w piłkę");
     }
+
+    @Override
+    public void display() {
+        System.out.println("Position: "+position);
+    }
 }

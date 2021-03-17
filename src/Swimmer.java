@@ -13,4 +13,17 @@ public class Swimmer extends Sportsman {
     public void train() {
         System.out.println("Pływam");
     }
+
+    public void display(){
+        System.out.println("Favourite style: "+favouriteStyle);
+        System.out.println("Best swimming time: "+bestSwimTime);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Swimmer{" +
+                "favouriteStyle='" + favouriteStyle + '\'' +
+                ", bestSwimTime='" + bestSwimTime + '\'' +
+                '}';
+    }
 }

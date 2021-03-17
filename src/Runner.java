@@ -13,4 +13,10 @@ public class Runner extends Sportsman{
     public void train() {
         System.out.println("Biegam");
     }
+
+    @Override
+    public void display() {
+        System.out.println("Favourite distance: "+favouriteDistance);
+        System.out.println("Best run time: "+bestRunTime);
+    }
 }
